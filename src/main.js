@@ -1,0 +1,10 @@
+const a = 3;
+const b = 2;
+
+console.log(a, b);
+
+function sum() {
+  return a + b;
+}
+
+sum();
