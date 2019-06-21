@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ppt-br">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>02 - Template literal para html fragments</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+  const article = {
+    title: 'aprendendo template Strings',
+    intro: 'uma breve explicação de como se utilizar template strings do ES6 em seu código hoje!',
+    body: 'Lorem Ipsum dolor sit amet, consectetur adipisicing elit. Molestias, officia, perspiciatis? Architecto..',
+    tags: ['es6', 'js', 'template-literal'],
+    author: 'Raphael' //caso retirar, ele irá retornar unknown
+  };
+
+  function renderAuthor(name){
+    return (name) ? name : 'unknown'
+  }
+
+  const markup = `
+    <article>
+      <header>
+        <h1>${article.title}</h1>
+      </header>
+
+      <section>
+        <p>${article.intro}</p>
+      </section>
+
+      <footer>
+        <ul>
+          ${article.tags.map((tag) => `<li>${tag}</li>`).join('')}
+        </ul>
+        <p>author: ${renderAuthor(article.author)}</p>
+      </footer>
+    </article>
+
+  `;
+
+document.body.innerHTML = markup;
+
+
+</script>
+
+</html>

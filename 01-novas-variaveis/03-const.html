@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+//e uma variavel constante em toda a vida.
+const will = {
+  name: 'Willian',
+  age: 23
+};
+
+
+Object.freeze(will); //congela o objeto (no caso will)
+will.age = 26;
+console.log(will);
+
+  </script>
+
+
+</body>
+</html>
